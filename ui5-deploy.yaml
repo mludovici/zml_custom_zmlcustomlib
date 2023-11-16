@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: '2.2'
+metadata:
+  name: "zmlcustomlib"
+type: library
+framework:
+  name: SAPUI5
+  version: 1.118.0
+  libraries:
+    - name: sap.ui.core
+    - name: themelib_sap_belize
+    - name: themelib_sap_fiori_3
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: S4P_300
+          url: http://adeps4p0.saplab.3as-cloud.de:44300
+          scp: true
+        app:
+          name: ZMLCUSTOMLIB
+          description: zmlcustomlib
+          package: zmlcustomlib
+          transport: S4PK903176
+        exclude:
+          - /test/

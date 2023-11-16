@@ -1,0 +1,48 @@
+{
+    "_version": "1.12.0",
+    "sap.app": {
+      "id": "zml.custom.zmlcustomlib",
+      "type": "library",
+      "applicationVersion": {
+        "version": "1.0.0"
+      },
+      "title": "My Custom Button",
+      "description": "A custom SAPUI5 library for demonstration",
+      "offline": true
+    },
+    "sap.ui": {
+      "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": ["sap_belize"]
+    },
+    "sap.ui5": {
+      "dependencies": {
+        "minUI5Version": "1.77.0",
+        "libs": {
+          "sap.ui.core": {},
+          "sap.m": {}
+        }
+      },
+      "library": {
+        "name": "zml.custom.zmlcustomlib",
+        "version": "1.0.0",
+        "dependencies": [
+          {
+            "name": "sap.ui.core",
+            "minVersion": "1.77.0"
+          },
+          {
+            "name": "sap.m",
+            "minVersion": "1.77.0"
+          }
+        ]
+      },
+      "extends": {
+        "extensions": {}
+      }
+    }
+  }

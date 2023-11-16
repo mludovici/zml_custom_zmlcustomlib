@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<library xmlns="http://www.sap.com/sap.ui.library.xsd">
+	<name>zml.custom.zmlcustomlib</name>
+	<vendor>Fiori tools</vendor>
+	<version>${version}</version>
+	<copyright>${copyright}</copyright>
+	<title>zmlcustomlib</title>
+	<documentation>Some description about zmlcustomlib</documentation>
+	<dependencies>
+		<dependency>
+			<libraryName>sap.ui.core</libraryName>
+		</dependency>
+	</dependencies>
+</library>
